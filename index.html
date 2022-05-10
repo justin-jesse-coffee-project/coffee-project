@@ -9,16 +9,9 @@
 <body>
     <h1 class="text-center">Coffee!</h1>
     <span class="d-sm-inline"><hr></span>
+<!--  Code for Sorting out the Roasts  -->
     <div class="form1">
         <form>
-<!--            <select class="form-select" aria-label="Default select example">-->
-<!--                <option selected>Select your roast</option>-->
-<!--                <option value="1">Light</option>-->
-<!--                <option value="2">Medium</option>-->
-<!--                <option value="3">Dark</option>-->
-<!--            </select>-->
-
-
             <label for="roast-selection"></label>
             <select id="roast-selection">
                 <option>light</option>
@@ -26,30 +19,54 @@
                 <option>dark</option>
             </select>
 
-            <input id="submit" type="submit" />
+            <input id="submit1" type="submit" />
         </form>
     </div>
-    <div>
-        <form>
-            <label for="addCoffee"></label>
-            <textarea id=""> </textarea>
-            <select id="roast2">
-                <option>Light</option>
-                <option>Medium</option>
-                <option>Dark</option>
-            </select>
-            <input id="addCoffee" type="submit">
+
+<!-- Code for adding Coffees to array   -->
+    <div class="form1">
+
+        <form name="add">
+            <div>
+                <label for="input1">Coffe name</label>
+                <input id="input1" name="coffee" type="text">
+            </div>
+            <div>
+                <label for="input2">Roast type</label>
+                <input id="input2" name="roast" type="text">
+            </div>
+            <div>
+                <input id="submit2" type="submit">
+            </div>
         </form>
+        <script>
+            "use strict";
+            (function() {
+                // get the "username" input
+                var coffeeInput = document.forms.add.coffee;
+                var roastInput = document.forms.add.roast;
+
+                // log the value of the "username" input
+                console.log(toString(coffeeInput),toString(roastInput))
+             // addCoffee(coffeeInput,roastInput)
+            })();
+        </script>
+
+<!--        <form name="add">-->
+
+<!--            <select id="coffee-roast">-->
+
+<!--                <option>Light</option>-->
+<!--                <option>Medium</option>-->
+<!--                <option>Dark</option>-->
+<!--            </select>-->
+
+<!--            <input id="coffeename" type="text" placeholder="Coffee-name">-->
+<!--            <input id="addCoffee" type="submit" />-->
+<!--        </form>-->
 
     </div>
-
-    <div class="roast" id="roast">
-        <div class="row">
-
-        </div>
-    </div>
-
-
+<!--  Array display for coffee + roast  -->
 <div class="array1">
     <table>
         <thead>
@@ -62,6 +79,7 @@
         <tbody id="coffees"></tbody>
     </table>
 </div>
+<!--    Testing things-->
 
     <script src="main.js"></script>
 </body>
