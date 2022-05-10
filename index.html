@@ -9,16 +9,48 @@
 <body>
     <h1 class="text-center">Coffee!</h1>
     <span class="d-sm-inline"><hr></span>
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <div class="form1">
+        <form>
+<!--            <select class="form-select" aria-label="Default select example">-->
+<!--                <option selected>Select your roast</option>-->
+<!--                <option value="1">Light</option>-->
+<!--                <option value="2">Medium</option>-->
+<!--                <option value="3">Dark</option>-->
+<!--            </select>-->
 
+
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+
+            <input id="submit" type="submit" />
+        </form>
+    </div>
+    <div>
+        <form>
+            <label for="addCoffee"></label>
+            <textarea id=""> </textarea>
+            <select id="roast2">
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
+            <input id="addCoffee" type="submit">
+        </form>
+
+    </div>
+
+    <div class="roast" id="roast">
+        <div class="row">
+
+        </div>
+    </div>
+
+
+<div class="array1">
     <table>
         <thead>
             <tr>
@@ -29,6 +61,7 @@
         </thead>
         <tbody id="coffees"></tbody>
     </table>
+</div>
 
     <script src="main.js"></script>
 </body>
