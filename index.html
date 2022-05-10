@@ -20,7 +20,7 @@
                 <option>dark</option>
             </select>
 
-            <input id="submit1" type="submit" />
+            <input id="submit" type="submit" />
         </form>
     </div>
 
@@ -29,30 +29,17 @@
 
         <form name="add">
             <div>
-                <label for="input1">Coffe name</label>
-                <input id="input1" name="coffee" type="text">
+                <label for="add-coffee">Coffee name</label>
+                <input id="add-coffee" name="coffee" type="text">
             </div>
             <div>
-                <label for="input2">Roast type</label>
-                <input id="input2" name="roast" type="text">
+                <label for="add-roast">Roast type</label>
+                <input id="add-roast" name="roast" type="text">
             </div>
             <div>
                 <input id="submit2" type="submit">
             </div>
         </form>
-        <script>
-            "use strict";
-            (function() {
-
-                var coffeeInput = document.forms.add.coffee;
-                var roastInput = document.forms.add.roast;
-
-
-                console.log(toString(coffeeInput),toString(roastInput))
-             // addCoffee(coffeeInput,roastInput)
-            })();
-        </script>
-
         <form name="add">
 
             <select id="coffee-roast">
