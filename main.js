@@ -39,17 +39,36 @@ function renderCoffees(coffees) {
     return html;
 }
 
+//sort by roast
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var searchRoast = searchBox.value.toUpperCase();
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+
+    coffees.forEach(function (coffee) {
+        if ((coffee.roast === selectedRoast || selectedRoast === 'all') && (coffee.name.toUpperCase().includes(searchRoast) || coffee.name.length <1)) {
             filteredCoffees.push(coffee);
         }
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+//sort by coffee name
+// function searchCoffees() {
+//     var searchRoast = searchBox.value.toUpperCase();
+//     var filteredCoffees = [];
+//     // console.log(searchRoast);
+//     coffees.forEach(function(coffee) {
+//         if (coffee.name.toUpperCase().includes(searchRoast)) {
+//             filteredCoffees.push(coffee);
+//             // console.log(filteredCoffees);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
+
 //Coffee Array
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 
@@ -74,11 +93,13 @@ var coffeeName = document.querySelector('#add-coffee')
 tbody.innerHTML = renderCoffees(coffees);
 var newRoast = document.querySelector('#add-roast')
 submitButton.addEventListener('click', updateCoffees);
-submitButton.addEventListener('click', addCoffee);
-coffeeName.addEventListener('click',addCoffee );
-newRoast.addEventListener('click',addCoffee );
+// submitButton.addEventListener('click', addCoffee);                    //This code added when updating, not idea
+// coffeeName.addEventListener('click',addCoffee );
+// newRoast.addEventListener('click',addCoffee );
 var submitButton2 = document.querySelector('#submit2');
 submitButton2.addEventListener('click',addCoffee );
 submitButton2.addEventListener('click',updateCoffees );
-//testing thingsstener('click',addCoffee );
+var searchBox = document.querySelector('#searchBox');
+searchBox.addEventListener('keyup', updateCoffees);
+
 

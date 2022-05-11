@@ -9,9 +9,8 @@ td, th {
 }
 .form1{
     display: flex;
-    padding-right: 100px;
-    padding-top: 50px;
-    justify-content: flex-end;
+    margin: 40px;
+    justify-content: right;
 }
 
 .array1{
@@ -20,5 +19,13 @@ td, th {
     width: 300px;
     padding-left: 50px;
     justify-content: flex-start;
+
+}
+.coffee1{
+    display: flex;
+    margin: 15px;
+    padding-top: 40px;
+    padding-right: 35px;
+    justify-content: right;
 
 }
