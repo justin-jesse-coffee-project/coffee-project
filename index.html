@@ -3,68 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>COFFEE SHOP</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="text-center">Coffee!</h1>
-    <span class="d-sm-inline"><hr></span>
+<h1 class="text-center">Coffee!</h1>
+<span class="d-sm-inline"><hr></span>
 <!--  Code for Sorting out the Roasts  -->
-    <div class="form1">
-        <form>
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
-                <option>all</option>
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-            <div>
-                <label for="searchBox">coffee Name</label>
-                <input id="searchBox" name="coffeeSort" type="text">
-            </div>
-            <div>
-                <input id="submit" type="submit" />
-            </div>
-        </form>
-    </div>
-    <span class="d-sm-inline"><hr></span>
-    <h1 class="coffee1">Add A Coffee!</h1>
-<!-- Code for adding Coffees to array   -->
-    <div class="form1">
-        <form name="add">
-            <div>
-                <label for="add-coffee">Coffee name</label>
-                <input id="add-coffee" name="coffee" type="text">
-            </div>
-            <div>
-                <label for="add-roast">Roast type</label>
-                <select id="add-roast">
+<div class="container1">
+    <div class="container2">
+        <section>
+            <form>
+                <h6>Roast</h6>
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
-            </div>
-            <div>
-                <input id="submit2" type="submit">
-            </div>
-        </form>
-    </div>
+                <div>
+                    <h6 for="searchBox">Coffee Name</h6>
+                    <input id="searchBox" name="coffeeSort" type="text">
+                </div>
+                <div>
+                    <input id="submit" type="submit"/>
+                </div>
+            </form>
 
-<!--  Array display for coffee + roast  -->
-<div class="array1">
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-</div>
-<!--    Testing things-->
+            <span class="d-sm-inline"><hr></span>
+            <h2 class="coffee1">Add A Coffee!</h2>
+            <!-- Code for adding Coffees to array   -->
+            <div class="container">
+                <form name="add">
+                    <div>
+                        <div>
+                            <h6 for="add-roast">Roast</h6>
+                            <select id="add-roast">
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+                        </div>
+                        <h6 for="add-coffee">Name</h6>
+                        <input id="add-coffee" name="coffee" type="text">
+                    </div>
+
+                    <div>
+                        <input id="submit2" type="submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!--  Array display for coffee + roast  -->
+        <div class="container">
+            <table class="table table-borderless">
+                <thead>
+                <tr>
+<!--                    <th>ID</th>-->
+<!--                    <th>NAME</th>-->
+<!--                    <th>ROAST</th>-->
+                </tr>
+                </thead>
+                <tbody id="coffees"></tbody>
+            </table>
+        </div>
+    </div>
+    <!--    Testing things-->
 
     <script src="main.js"></script>
 </body>

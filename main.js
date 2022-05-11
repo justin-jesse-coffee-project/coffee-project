@@ -23,7 +23,7 @@ function renderCoffee(coffee) {
 
 
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
+    // html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
@@ -93,6 +93,7 @@ var coffeeName = document.querySelector('#add-coffee')
 tbody.innerHTML = renderCoffees(coffees);
 var newRoast = document.querySelector('#add-roast')
 submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('change', updateCoffees);
 // submitButton.addEventListener('click', addCoffee);                    //This code added when updating, not idea
 // coffeeName.addEventListener('click',addCoffee );
 // newRoast.addEventListener('click',addCoffee );
@@ -101,5 +102,5 @@ submitButton2.addEventListener('click',addCoffee );
 submitButton2.addEventListener('click',updateCoffees );
 var searchBox = document.querySelector('#searchBox');
 searchBox.addEventListener('keyup', updateCoffees);
-
+roastSelection.addEventListener('change', updateCoffees);
 
